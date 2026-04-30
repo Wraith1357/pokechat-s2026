@@ -51,7 +51,7 @@ const ChatForm = ({setSearchResults})=>{
         disabled={isLoading}
         onChange={(e)=>setQuery(e.target.value)}
         onKeyDown={(e)=>e.key === 'Enter' && chat(query)}
-        icon={<Icon name='send' inverted circular link />}
+        icon={<Icon name='send' inverted circular link onClick={()=> chat(query)}/>}
         placeholder='Ask me a Pokemon Question...'
         />
         <Button onClick={() => chat("strongest pokemon limit 1")}>
