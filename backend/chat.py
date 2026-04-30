@@ -10,7 +10,7 @@ import json, os
 load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
 app = Flask(__name__)
-CORS(app)
+#CORS(app)
 
 _raw_endpoint = os.environ.get("AZURE_OPENAI_ENDPOINT")
 _azure_endpoint = normalize_azure_openai_endpoint(_raw_endpoint) if _raw_endpoint else None
